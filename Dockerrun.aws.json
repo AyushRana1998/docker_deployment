@@ -24,8 +24,8 @@
         },
         {
             "name": "ngnix",
-            "image": "9458181013/multi-ngnix",
-            "hostname": "ngnix",
+            "image": "9458181013/multi-nginx",
+            "hostname": "nginx",
             "essential": true,
             "portMappings": [
                 {
