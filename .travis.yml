@@ -25,4 +25,16 @@ after_success:
   - docker push 9458181013/multi-server
   - docker push 9458181013/multi-worker
 
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-2'
+  app: 'Fibcal_docker_deployment'
+  env: 'Fibcaldockerdeployment-env'
+  bucket_name: 'elasticbeanstalk-us-east-2-144524267771'
+  bucket_path: 'docker-fibcal'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+
 
